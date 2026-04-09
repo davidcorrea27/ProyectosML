@@ -13,7 +13,7 @@ import os
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
-EXPIRE_MINUTES = int(os.getenv("EXPIRE_MINUTES",))
+EXPIRE_MINUTES = int(os.getenv("EXPIRE_MINUTES"))
 # Hash Password
 # CryptContext configura el algoritmo de hashing
 # bcrypt es el estándar actual para contraseñas
