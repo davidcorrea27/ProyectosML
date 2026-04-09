@@ -9,15 +9,11 @@ from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 from database import get_db
  
-# Configuración — clave secreta y algoritmo del JWT
-# SECRET_KEY: cadena privada para firmar los tokens
-# Cámbiarla  por algo largo y aleatorio en producción
-# ALGORITHM: HS256 es el estándar más usado
-# EXPIRE_MINUTES: cuántos minutos dura el token antes de expirar
-SECRET_KEY      = "clave_super_secreta_cambiame_en_produccion"
-ALGORITHM       = "HS256"
-EXPIRE_MINUTES  = 30
- 
+import os
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
+EXPIRE_MINUTES = int(os.getenv("EXPIRE_MINUTES", 30))
 # Hash Password
 # CryptContext configura el algoritmo de hashing
 # bcrypt es el estándar actual para contraseñas

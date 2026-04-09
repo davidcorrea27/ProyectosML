@@ -1,0 +1,27 @@
+# Entorno virtual
+venv/
+.env/
+
+# Variables de entorno
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de sistema
+.DS_Store
+
+# Logs
+*.log
+
+# SQLite (si usas)
+*.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Alembic cache
+alembic/versions/__pycache__/
