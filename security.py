@@ -12,8 +12,8 @@ from database import get_db
 import os
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = os.getenv("ALGORITHM", "HS256")
-EXPIRE_MINUTES = int(os.getenv("EXPIRE_MINUTES", 30))
+ALGORITHM = os.getenv("ALGORITHM")
+EXPIRE_MINUTES = int(os.getenv("EXPIRE_MINUTES",))
 # Hash Password
 # CryptContext configura el algoritmo de hashing
 # bcrypt es el estándar actual para contraseñas
